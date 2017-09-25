@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sigmatechnology.csa.entity.User;
 import com.sigmatechnology.csa.entity.Vehicle;
 import com.sigmatechnology.csa.repository.VehicleRepository;
 

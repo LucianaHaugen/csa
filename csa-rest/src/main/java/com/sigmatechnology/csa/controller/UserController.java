@@ -20,7 +20,7 @@ import com.sigmatechnology.csa.service.UserService;
 /**
  * @author lucianahaugen
  * Return a JSON payload from user REST API endpoint 
- * by returning objects from user Spring MVC controller method.
+ * by returning objects from user Spring MVC com.sigmatechnology.csa.controller method.
  */
 
 @RestController

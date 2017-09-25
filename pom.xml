@@ -6,7 +6,14 @@
 	<groupId>com.sigmatechnology.csa</groupId>
 	<artifactId>csa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<!--<module>csa-auth</module>-->
+		<module>csa-rest</module>
+		<module>csa-service</module>
+		<module>csa-integration</module>
+		<module>csa-web</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>csa</name>
 	<description>Demo project for CarSharingApp using Spring Boot</description>
@@ -15,7 +22,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.7.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from com.sigmatechnology.csa.repository -->
 	</parent>
 
 	<properties>

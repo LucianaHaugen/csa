@@ -1,0 +1,7 @@
+<!DOCTYPE com.sigmatechnology.csa.web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/com.sigmatechnology.csa.web-app_2_3.dtd" >
+
+<com.sigmatechnology.csa.web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</com.sigmatechnology.csa.web-app>
