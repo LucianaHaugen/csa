@@ -24,6 +24,7 @@ import com.sigmatechnology.csa.service.UserService;
  */
 
 @RestController
+@RequestMapping("/api/csa")
 public class UserController {
 	
 	@Autowired

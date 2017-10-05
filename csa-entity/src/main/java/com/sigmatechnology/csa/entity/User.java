@@ -1,10 +1,7 @@
 package com.sigmatechnology.csa.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by lucianahaugen on 31/08/17.
@@ -25,6 +22,9 @@ public class User {
     private Integer totalBookingsYear;
     @Column(name = "total_distance_year")
     private Double totalDistanceYear;
+
+    @Transient
+	private List<Booking> bookingList;
     
     
     
@@ -90,7 +90,13 @@ public class User {
 		this.totalDistanceYear = totalDistanceYear;
 	}
 
-	
+	public List<Booking> getBookingList() {
+		return bookingList;
+	}
+
+	public void setBookingList(List<Booking> bookingList) {
+		this.bookingList = bookingList;
+	}
 
 	@Override
 	public String toString() {

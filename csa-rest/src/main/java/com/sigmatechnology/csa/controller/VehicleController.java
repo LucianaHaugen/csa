@@ -18,6 +18,7 @@ import com.sigmatechnology.csa.service.VehicleService;
  */
 
 @RestController
+@RequestMapping("/api/csa")
 public class VehicleController {
 	
 	@Autowired

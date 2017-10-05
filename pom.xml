@@ -12,6 +12,7 @@
 		<module>csa-service</module>
 		<module>csa-integration</module>
 		<module>csa-web</module>
+		<module>csa-entity</module>
 	</modules>
 	<packaging>pom</packaging>
 

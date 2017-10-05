@@ -3,10 +3,10 @@ package com.sigmatechnology.csa.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sigmatechnology.csa.entity.Booking;
+import com.sigmatechnology.csa.repository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 
 
 @Service
@@ -14,7 +14,7 @@ public class BookingService {
 	
 	@Autowired
 	private BookingRepository bookingRepository;
-	
+
 	public List<Booking> getAllBookings() {
 		List<Booking> bookings = new ArrayList<>();
 		bookingRepository.findAll().forEach(bookings::add);

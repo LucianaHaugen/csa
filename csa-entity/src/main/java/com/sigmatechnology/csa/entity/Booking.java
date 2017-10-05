@@ -4,13 +4,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -51,6 +45,9 @@ public class Booking {
     
     @ManyToOne
     private Vehicle vehicle;
+
+    @Transient
+	private List<User> userList;
  
     
 	public Booking() {

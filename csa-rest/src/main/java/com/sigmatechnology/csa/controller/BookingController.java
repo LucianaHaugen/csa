@@ -2,6 +2,10 @@ package com.sigmatechnology.csa.controller;
 
 import java.util.List;
 
+import com.sigmatechnology.csa.entity.Booking;
+import com.sigmatechnology.csa.entity.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sigmatechnology.csa.entity.Booking;
-import com.sigmatechnology.csa.entity.User;
+
 import com.sigmatechnology.csa.service.BookingService;
 
 @RestController
+@RequestMapping("/api/csa")
 public class BookingController {
+
+	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
 	private BookingService bookingService;
@@ -38,7 +44,8 @@ public class BookingController {
 	@RequestMapping(method=RequestMethod.POST, value="users/{userId}/bookings")
 	public void addBooking(@RequestBody Booking booking, @PathVariable long userId) {
 		//booking.setUser(userId);
-		booking.setUser(new User(userId, "", "", true, 0, 0.0));
+		//User user = new User();
+		//user.getBookingList()
 		bookingService.createBooking(booking);
 	}
 	
